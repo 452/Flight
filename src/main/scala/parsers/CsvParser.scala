@@ -1,8 +1,14 @@
 package parsers
 
+import com.github.tototoshi.csv.{CSVReader, TSVFormat}
+
+import scala.reflect.io.File
+
 /**
   * Created by ogur on 12/22/15.
   */
 class CsvParser(csvFile: String) {
-  def parse: Seq[Seq[String]] = Seq.fill(6)(Seq.empty)
+  implicit object TSVfrmt extends TSVFormat
+
+  def parse: Seq[Seq[String]] = CSVReader.open(csvFile).all()
 }

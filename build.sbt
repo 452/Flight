@@ -12,4 +12,5 @@ libraryDependencies ++=
     "org.specs2" % "specs2-mock_2.11" % "3.6.6",
     "com.github.tototoshi" % "scala-csv_2.11" % "1.2.2",
     "io.spray" % "spray-json_2.11" % "1.3.1")
-    
+
+libraryDependencies += "com.github.tototoshi" %% "scala-csv" % "1.2.2"
