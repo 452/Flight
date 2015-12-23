@@ -17,5 +17,5 @@ class ValidPostalCodesTest extends SpecificationWithJUnit {
 
 trait ValidPostalCodesTestContext extends Scope {
   val filePath = "src/test/resources/ValidPostalCodes.txt"
-  val validPostalCodesParser = new CsvParser(filePath, Some(PostalCode.numberOfFields))
+  val validPostalCodesParser = new CsvParser(filePath)
 }
