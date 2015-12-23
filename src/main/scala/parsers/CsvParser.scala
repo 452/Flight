@@ -5,7 +5,7 @@ import com.github.tototoshi.csv.{CSVReader, TSVFormat}
 /**
   * Created by ogur on 12/22/15.
   */
-class CsvParser(csvFile: String, numberOfColumns: Option[Int]) {
+class CsvParser(csvFile: String, numberOfColumns: Option[Int] = None) {
   implicit object format extends TSVFormat
 
   def parse: Seq[Seq[String]] = numberOfColumns match {
