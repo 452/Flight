@@ -41,5 +41,6 @@ class PostalCodeParserCSV(csvFilePath: String) extends PostalCodeParser(csvFileP
 }
 
 object Main extends App {
-  new PostalCodeParserCSV("src/test/resources/InvalidFormatPostalCodes.txt").parse
+  val parsed = new PostalCodeParserCSV("src/test/resources/PostalCodes.txt").parse
+  println(parsed)
 }
