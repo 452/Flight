@@ -37,7 +37,7 @@ class PostalCodeParserCSV(csvFilePath: String) extends PostalCodeParser(csvFileP
       })
     } match {
       case Success(value) => value
-      case Failure(ex) => throw new ParseException(s"${ex.getMessage}. \nInvalid CSV file format. Each line should contain a postal code", 0)
+      case Failure(ex) => throw new ParseException(s"${ex.getMessage}", 0)
     }
   }
 }
